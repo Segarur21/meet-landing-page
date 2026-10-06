@@ -1,0 +1,33 @@
+:root {
+  --cyan-600: #4d96a9;
+  --cyan-300: #8fe3d9;
+  --purple-600: #855fb1;
+  --purple-300: #b18bdd;
+  --slate-900: #28283d;
+  --slate-600: #87879d;
+  --slate-300: #d8d8d8;
+  --white: #fafafa;
+  --font-base: "Red Hat Display", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+    font-family: var(--font-base);
+    font-size: 1.6rem;
+    line-height: 1.5;
+    color: var(--slate-900);
+    background-color: var(--white);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; 
+}
