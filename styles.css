@@ -1,13 +1,17 @@
 :root {
-  --cyan-600: #4d96a9;
-  --cyan-300: #8fe3d9;
-  --purple-600: #855fb1;
+  --cyan-600: #336470;
+  --cyan-opacity: rgba(51, 100, 112, 0.8);
+  --cyan-300: #90e4f9;
+  --purple-600: #5a3c7b;
   --purple-300: #b18bdd;
   --slate-900: #28283d;
   --slate-600: #87879d;
   --slate-300: #d8d8d8;
-  --white: #fafafa;
+  --marker-color: #fafafa;
+  --white: #ffffff;
   --font-base: "Red Hat Display", sans-serif;
+  --text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8);
+  --box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.8);
 }
 
 *,
@@ -22,12 +26,176 @@ html {
   font-size: 62.5%;
 }
 body {
-    font-family: var(--font-base);
-    font-size: 1.6rem;
-    line-height: 1.5;
-    color: var(--slate-900);
-    background-color: var(--white);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column; 
+  font-family: var(--font-base);
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: var(--slate-900);
+  background-color: var(--white);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  letter-spacing: 0.02em;
 }
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-block-start: 6rem;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+.logo {
+  margin-block-end: 4rem;
+  padding: 0 3.2rem;
+}
+.hero-img-desktop {
+  display: none;
+}
+.hero-img-mobile {
+  max-width: 115%;
+  overflow: hidden;
+  margin-block-end: 4rem;
+}
+.hero-content {
+  max-width: 68rem;
+  padding: 0 3.2rem;
+}
+
+.hero-title {
+  font-weight: 900;
+  font-size: 4rem;
+  line-height: 1.2;
+  margin-block-end: 2.4rem;
+}
+.hero-title span,
+.features-title span,
+.experience-title span {
+  display: block;
+}
+.hero-description {
+  margin-block-end: 2.4rem;
+}
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  align-items: center;
+  margin-block-end: 11rem;
+}
+.btn {
+  padding: 1.6rem 4rem;
+  border-radius: 10rem;
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 900;
+  display: inline-block;
+  box-shadow: var(--box-shadow);
+}
+.btn-1 {
+  background-color: var(--cyan-600);
+}
+.btn-2 {
+  background-color: var(--purple-600);
+}
+.btn-1 span {
+  color: var(--cyan-300);
+}
+.btn-2 span {
+  color: var(--purple-300);
+}
+
+.marker {
+  display: flex;
+  flex-direction: column;
+  font-weight: 900;
+  border: 0.1rem solid var(--slate-300);
+  color: var(--slate-600);
+  margin-block-start: 4rem;
+  margin-block-end: 6.4rem;
+  border-radius: 50%;
+  padding: 1.6rem;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 5.7rem;
+  height: 5.7rem;
+  margin-inline: auto;
+  background-color: var(--marker-color);
+}
+.marker::before {
+  content: "";
+  width: 0.1rem;
+  height: 7.9rem;
+  background-color: var(--slate-300);
+  position: absolute;
+  inset-block-start: -7.9rem;
+}
+
+main {
+  padding: 0 3.2rem;
+}
+.images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1.6rem;
+  margin-block-end: 6.4rem;
+}
+.image-features {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.7rem;
+}
+.overline {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 1.2rem;
+  letter-spacing: 0.4rem;
+  color: var(--cyan-600);
+  margin-block-end: 1.6rem;
+}
+.features-title {
+  font-weight: 900;
+  font-size: 3.2rem;
+  line-height: 1.1;
+  margin-block-end: 3.2rem;
+}
+.description-image {
+  margin-block-end: 17rem;
+}
+
+.experience {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image:
+    linear-gradient(var(--cyan-opacity), var(--cyan-opacity)),
+    url(./images/mobile/image-footer.jpg);
+  background-size: cover;
+  background-position: center;
+  color: var(--white);
+  padding: 0 3.2rem;
+  padding-block-end: 6.4rem;
+}
+.experience .marker {
+  margin-block-start: -3rem;
+  margin-block-end: 3.2rem;
+
+}
+.experience-title {
+  font-weight: 900;
+  font-size: 3.2rem;
+  line-height: 1.1;
+  margin-block-end: 2.4rem;
+  text-shadow: var(--text-shadow);
+}
+.description-footer {
+  text-shadow: var(--text-shadow);
+  margin-block-end: 2.4rem;
+  font-weight: 500;
+}
+
