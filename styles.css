@@ -36,13 +36,13 @@ body {
   flex-direction: column;
   text-align: center;
   letter-spacing: 0.02em;
+  justify-content: space-between;
 }
 .hero {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  margin-block-start: 6rem;
+  margin-block-start: 6.4rem;
 }
 img {
   display: block;
@@ -142,8 +142,8 @@ main {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  gap: 1.6rem;
-  margin-block-end: 6.4rem;
+  gap: 3.2rem;
+  margin-block-end: 7rem;
 }
 .image-features {
   max-width: 100%;
@@ -176,7 +176,7 @@ main {
     linear-gradient(var(--cyan-opacity), var(--cyan-opacity)),
     url(./images/mobile/image-footer.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: center top;
   color: var(--white);
   padding: 0 3.2rem;
   padding-block-end: 6.4rem;
@@ -184,7 +184,6 @@ main {
 .experience .marker {
   margin-block-start: -3rem;
   margin-block-end: 3.2rem;
-
 }
 .experience-title {
   font-weight: 900;
@@ -199,3 +198,165 @@ main {
   font-weight: 500;
 }
 
+@media screen and (min-width: 35.5rem) {
+  .logo {
+    margin-block-end: 6.4rem;
+  }
+  .hero-img-mobile {
+    max-width: 100%;
+    padding: 0 3.2rem;
+    margin-block-end: 6.4rem;
+  }
+  .hero-title {
+    font-size: 4.8rem;
+    line-height: 1.2;
+  }
+  .buttons {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .images {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    max-width: 100rem;
+    margin-inline: auto;
+  }
+  .hero-description {
+    max-width: 46rem;
+    margin-inline: auto;
+  }
+
+  .description-image {
+    max-width: 42rem;
+    margin-inline: auto;
+  }
+  .overline {
+    font-size: 1.4rem;
+    letter-spacing: 0.5rem;
+  }
+  .features-title {
+    font-size: 3.6rem;
+  }
+  .experience .description-footer,
+  .experience-title {
+    max-width: 50.4rem;
+  }
+
+  .experience {
+    background-image:
+      linear-gradient(var(--cyan-opacity), var(--cyan-opacity)),
+      url(./images/tablet/image-footer.jpg);
+    padding-block-end: 11.2rem;
+  }
+  .experience-title {
+    font-size: 3.6rem;
+  }
+  .experience-title span {
+    display: inline;
+  }
+}
+
+@media screen and (min-width: 83rem) {
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "logo logo logo"
+      "left content right";
+    align-items: center;
+    max-width: 144rem;
+    margin-inline: auto;
+    padding: 0 3.2rem;
+    margin-block-end: 6.4rem;
+  }
+  .logo {
+    grid-area: logo;
+    justify-self: center;
+  }
+
+  .hero-img-left {
+    grid-area: left;
+    align-self: start;
+    justify-self: start;
+    margin-inline-end: 3.2rem;
+  }
+  .hero-img-right {
+    grid-area: right;
+    align-self: center;
+    justify-self: end;
+    margin-inline-start: 3.2rem;
+  }
+  .hero-content {
+    grid-area: content;
+    padding: 0;
+  }
+  .hero-description {
+    font-size: 1.8rem;
+    margin-block-end: 3.2rem;
+  }
+  .hero-img-desktop {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-block-end: 0;
+  }
+  .hero-img-mobile {
+    display: none;
+  }
+  .hero-title {
+    font-size: 6.4rem;
+    line-height: 1.1;
+    margin-block-end: 3.2rem;
+  }
+  .description-image {
+    max-width: 54rem;
+    font-size: 1.8rem;
+  }
+  .features-title {
+    font-size: 4rem;
+  }
+  .overline {
+    font-size: 1.6rem;
+  }
+  .experience-title span {
+    display: block;
+  }
+  .experience {
+     background-image:
+      linear-gradient(var(--cyan-opacity), var(--cyan-opacity)),
+      url(./images/desktop/image-footer.jpg);
+      display: grid;
+      grid-template-columns:  minmax(0, 30rem) minmax(0, 32rem) minmax(0, 28rem) ;
+      grid-template-rows: auto;
+      grid-template-areas:
+        "mark mark mark"
+        "title content button";
+        align-items: center;
+        justify-content: center;
+        column-gap: 10rem;
+        padding-block-end: 8.6rem;
+        padding-inline: 3.2rem;
+  }
+  .experience .marker {
+    grid-area: mark;
+    margin-block-end: 8.6rem;
+
+  }
+  .experience-title {
+    grid-area: title;
+    font-size: 4rem;
+    text-align: start;
+    min-width: 30rem;
+  }
+  .description-footer {
+    grid-area: content;
+    font-size: 1.8rem;
+    text-align: start;
+    font-weight: 600;
+  }
+  .experience .btn {
+    grid-area: button;
+    min-width: 20rem;
+    margin-inline: auto;
+  }
+}
